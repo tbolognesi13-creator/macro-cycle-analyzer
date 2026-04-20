@@ -34,7 +34,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-DEFAULT_FRED_API_KEY = "7b401890caa9dae74e8d7550ad49c69d"
+DEFAULT_FRED_API_KEY = st.secrets.get("FRED_API_KEY", "")
 START_DATE = "2005-01-01"
 END_DATE = datetime.today().strftime("%Y-%m-%d")
 ZSCORE_WINDOW = 36
